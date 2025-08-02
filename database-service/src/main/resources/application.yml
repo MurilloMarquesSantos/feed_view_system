@@ -5,9 +5,9 @@ spring:
   application:
     name: database-service
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/?user=root
+    url: jdbc:mysql://127.0.0.1:3306/productData?createDatabaseIfNotExist=true
     username: root
-    password: {DB_PASSWORD}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: create-drop
