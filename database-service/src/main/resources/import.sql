@@ -1,0 +1,6 @@
+INSERT INTO product (name, description) VALUES ("computer", "high quality computer")
+INSERT INTO product (name, description) VALUES ("iphone", "high quality iphone")
+INSERT INTO product (name, description) VALUES ("tomato", "high quality tomato")
+INSERT INTO product (name, description) VALUES ("tablet", "high quality tablet")
+INSERT INTO product (name, description) VALUES ("ball", "high quality ball")
+INSERT INTO product (name, description) VALUES ("shoes", "high quality shoes")
