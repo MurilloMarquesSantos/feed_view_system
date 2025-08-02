@@ -17,10 +17,10 @@ public class UserService {
     private final RestTemplate restTemplate;
 
     public List<Product> listProducts() {
-        ResponseEntity<List<Product>> response = restTemplate.exchange("https://localhost:8081/home",
+        ResponseEntity<List<Product>> response = restTemplate.exchange("http://localhost:8081/home",
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<>() {
+                new ParameterizedTypeReference<List<Product>>() {
                 });
         return response.getBody();
 
