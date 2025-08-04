@@ -1,6 +1,8 @@
 name: Project CI
 
-on: push
+on:
+  push:
+    branches: [master]
 
 jobs:
   continuos-integration:
@@ -16,7 +18,7 @@ jobs:
           distribution: 'temurin'
 
       - name: project build
-        uses: mvn clean package -DskipTests
+        run: mvn clean package -DskipTests
 
       - name: project tests
-        uses: mvn test
+        run: mvn test
