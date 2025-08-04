@@ -1,0 +1,22 @@
+name: Project CI
+
+on: push
+
+jobs:
+  continuos-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v3
+
+      - name: Setup JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: project build
+        uses: mvn clean package -DskipTests
+
+      - name: project tests
+        uses: mvn test
