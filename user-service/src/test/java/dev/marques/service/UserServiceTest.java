@@ -17,7 +17,6 @@ class UserServiceTest {
     @Mock
     private UserService userService;
 
-
     @Test
     void listProducts_ReturnsListOfProduct_WhenSuccessful(){
 
