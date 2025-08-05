@@ -21,7 +21,7 @@ services:
       - ./data/kafkaFeed/data:/var/lib/kafka/data
 
   redpanda-console:
-    container_name: redpanda
+    container_name: redpanda-feed
     image: redpandadata/console:latest
     restart: on-failure
     entrypoint: /bin/sh
