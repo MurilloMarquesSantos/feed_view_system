@@ -18,4 +18,7 @@ public class RedisService {
         stringRedisTemplate.opsForValue().set(CACHE_KEY, productsList, 10, TimeUnit.MINUTES);
     }
 
+    public String getProductList() {
+        return stringRedisTemplate.opsForValue().get(CACHE_KEY);
+    }
 }
