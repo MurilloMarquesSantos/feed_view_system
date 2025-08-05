@@ -28,6 +28,8 @@ public class ProducerService {
     public void sendMessage() {
         List<Product> productList = productRepository.findAll();
 
+        log.info(productList.toString());
+
         String payload = jsonUtil.toJson(productList);
         try {
             kafkaTemplate.send(feedTopic, payload);
