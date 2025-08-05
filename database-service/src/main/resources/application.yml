@@ -17,4 +17,4 @@ spring:
       feed: feed-topic
     consumer:
       group-id: user-service-group
-      auto-offset-reset: latest
+      auto-offset-reset: earliest
