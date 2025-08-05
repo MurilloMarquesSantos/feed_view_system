@@ -32,7 +32,7 @@ public class ProducerService {
         try {
             kafkaTemplate.send(feedTopic, payload);
         } catch (Exception e) {
-            log.error("FAIL: ", e.getMessage());
+            log.error("FAIL: {} ", e.getMessage());
             log.error(e);
         }
     }
