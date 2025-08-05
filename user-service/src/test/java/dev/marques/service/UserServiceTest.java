@@ -20,11 +20,24 @@ class UserServiceTest {
     @Test
     void listProducts_ReturnsListOfProduct_WhenSuccessful(){
 
-        BDDMockito.when(userService.listProducts()).thenReturn("products");
+        BDDMockito.when(userService.listProducts()).thenReturn(List.of(new Product()));
 
-        String products = userService.listProducts();
+        List<Product> products = userService.listProducts();
 
-        assertThat(products).isNotBlank();
+        assertThat(products).hasSize(1);
 
     }
+
+//    Uncomment this when trying string response
+
+//    @Test
+//    void listProducts_ReturnsListOfProductString_WhenSuccessful(){
+//
+//        BDDMockito.when(userService.listProducts()).thenReturn("products");
+//
+//        String products = userService.listProducts();
+//
+//        assertThat(products).isNotBlank();
+//
+//    }
 }
