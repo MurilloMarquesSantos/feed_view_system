@@ -23,7 +23,6 @@ Communication between services is tested using two approaches:
 - Kafka
 - Redis
 - Docker
-- JMeter (or [insert tool if different]) for performance testing
 
 ## 🚀 Performance Benchmark
 
