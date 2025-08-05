@@ -1,11 +1,8 @@
 package dev.marques.service;
 
-import dev.marques.dto.Product;
 import dev.marques.util.JsonUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -27,8 +24,12 @@ public class UserService {
 
     private final JsonUtil jsonUtil;
 
-    public List<Product> listProducts() {
-        String productList = redisService.getProductList();
-        return jsonUtil.toProductList(productList);
+//    public List<Product> listProducts() {
+//        String productList = redisService.getProductList();
+//        return jsonUtil.toProductList(productList);
+//    }
+
+    public String listProducts() {
+        return redisService.getProductList();
     }
 }

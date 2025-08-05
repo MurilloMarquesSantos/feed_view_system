@@ -20,11 +20,11 @@ class UserServiceTest {
     @Test
     void listProducts_ReturnsListOfProduct_WhenSuccessful(){
 
-        BDDMockito.when(userService.listProducts()).thenReturn(List.of(new Product()));
+        BDDMockito.when(userService.listProducts()).thenReturn("products");
 
-        List<Product> products = userService.listProducts();
+        String products = userService.listProducts();
 
-        assertThat(products).hasSize(1);
+        assertThat(products).isNotBlank();
 
     }
 }
