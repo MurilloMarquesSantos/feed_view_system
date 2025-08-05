@@ -43,6 +43,7 @@ Best result: **8ms**
 ![image](img/msWithRedisString.png)
 **~80% improvement** when avoiding payload deserialization (raw `String` returned instead of Java object).
 Best result: **6ms**
+
 ---
 
 ### Scenario 2: 2000 Products
@@ -60,6 +61,7 @@ Best result: **16ms**
 ![image](img/msWithRedisString2.png)
 **~81% improvement**, thanks to reduced processing overhead.
 Best result: **15ms**
+
 ---
 
 ## 📈 Conclusion
